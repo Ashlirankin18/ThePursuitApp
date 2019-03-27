@@ -39,6 +39,18 @@ struct CommentCollectionKeys{
   static let commentText = "commentText"
   static let blogId = "blogId"
 }
+
+struct UnitsCollectionKeys{
+  static let CollectionKey = "units"
+  static let unitName = "unitName"
+  static let unitLink = "unitLink"
+}
+
+struct ResourceCollectionKeys{
+  static let CollectionKeys = "resources"
+  static let resourceName = "resourceName"
+  static let resourceLink = "resourceLink"
+}
 final class DBService {
   private init() {}
   
