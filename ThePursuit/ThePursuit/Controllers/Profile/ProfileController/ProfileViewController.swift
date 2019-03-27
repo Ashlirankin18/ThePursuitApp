@@ -6,15 +6,20 @@
 //  Copyright © 2019 Ashli Rankin. All rights reserved.
 //
 
+//Using PAUser Model
+//unwind from bio view?
+
 import UIKit
 
 class ProfileViewController: UIViewController {
 
-    //Using PAUser Model
-    //unwind from note view?
-    
   @IBOutlet weak var profileTableView: UITableView!
   let cellId = "ProfileCell"
+  
+    public lazy var profileHeaderView: ProfileHeaderView = {
+        let headerView = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 300))
+        return headerView
+    }()
   
   override func viewDidLoad() {
         super.viewDidLoad()

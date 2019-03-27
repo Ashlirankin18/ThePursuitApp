@@ -40,16 +40,16 @@
 		2EA221E4224C0DC500BBAE5D /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221E3224C0DC500BBAE5D /* Notes.swift */; };
 		2EA221E6224C16F200BBAE5D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221E5224C16F200BBAE5D /* String+Extension.swift */; };
 		2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221E7224C171000BBAE5D /* Alert+Extension.swift */; };
-<<<<<<< HEAD
+
 		912E2AC7224C20050087D294 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912E2AC6224C20050087D294 /* ProfileStoryboard.storyboard */; };
 		912E2AC9224C2B090087D294 /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E2AC8224C2B090087D294 /* IBDesignableView.swift */; };
 		912E2ACB224C2B430087D294 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E2ACA224C2B430087D294 /* Constants.swift */; };
 		912E2ACD224C2C6B0087D294 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E2ACC224C2C6B0087D294 /* ProfileHeaderView.swift */; };
 		912E2ACF224C2C8D0087D294 /* ProfileViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 912E2ACE224C2C8D0087D294 /* ProfileViewHeader.xib */; };
-=======
+
 		2EA221EB224C2D5B00BBAE5D /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221EA224C2D5B00BBAE5D /* Units.swift */; };
 		2EA221ED224C303B00BBAE5D /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221EC224C303B00BBAE5D /* Resources.swift */; };
->>>>>>> 8d490024320d05c787bdf1f2649a197de31d011c
+
 		9D25DA3F5BC8D4755532850F /* Pods_ThePursuit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CF7DC7D6878511037C2EA9 /* Pods_ThePursuit.framework */; };
 /* End PBXBuildFile section */
 
@@ -504,11 +504,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EA221E4224C0DC500BBAE5D /* Notes.swift in Sources */,
-<<<<<<< HEAD
 				912E2AC9224C2B090087D294 /* IBDesignableView.swift in Sources */,
-=======
+
 				2EA221EB224C2D5B00BBAE5D /* Units.swift in Sources */,
->>>>>>> 8d490024320d05c787bdf1f2649a197de31d011c
+
 				2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */,
 				2EA221E0224C0AE100BBAE5D /* LoginInView.swift in Sources */,
 				2EA221B3224BEEA800BBAE5D /* GeneralPostCell.swift in Sources */,
