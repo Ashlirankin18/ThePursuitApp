@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginInView" customModule="FellowBlogger" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="fbq-Y0-BZc"/>
+                <outlet property="createOptionButton" destination="NgE-a4-IkY" id="R3N-lB-8yx"/>
+                <outlet property="loginButton" destination="nKM-Sb-QbJ" id="oyY-z7-Cfu"/>
+                <outlet property="userEmail" destination="OvW-Qk-peA" id="OKf-ej-OU8"/>
+                <outlet property="userPassword" destination="bKv-UR-gMS" id="sHr-Hb-t17"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OvW-Qk-peA">
+                    <rect key="frame" x="30" y="189" width="315" height="44"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKv-UR-gMS">
+                    <rect key="frame" x="30" y="265" width="315" height="44"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-a4-IkY">
+                    <rect key="frame" x="30" y="410" width="315" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="EAF-Gp-Zvm"/>
+                    </constraints>
+                    <state key="normal" title="Don't have an accout? Create one here"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-Jy-AXa">
+                    <rect key="frame" x="30" y="57" width="315" height="62"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKM-Sb-QbJ">
+                    <rect key="frame" x="30" y="341" width="315" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Login In">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bKv-UR-gMS" firstAttribute="leading" secondItem="nKM-Sb-QbJ" secondAttribute="leading" id="5IO-Gj-IlW"/>
+                <constraint firstItem="OvW-Qk-peA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="6gA-gE-m2w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NgE-a4-IkY" secondAttribute="bottom" constant="227" id="90K-e3-Lns"/>
+                <constraint firstItem="nKM-Sb-QbJ" firstAttribute="width" secondItem="bKv-UR-gMS" secondAttribute="width" id="Bvv-JT-l6R"/>
+                <constraint firstItem="NgE-a4-IkY" firstAttribute="top" secondItem="nKM-Sb-QbJ" secondAttribute="bottom" constant="25" id="CJ6-51-sEp"/>
+                <constraint firstItem="OvW-Qk-peA" firstAttribute="trailing" secondItem="bKv-UR-gMS" secondAttribute="trailing" id="FEg-Vl-l7C"/>
+                <constraint firstItem="OvW-Qk-peA" firstAttribute="leading" secondItem="bKv-UR-gMS" secondAttribute="leading" id="GUJ-69-gc5"/>
+                <constraint firstItem="bKv-UR-gMS" firstAttribute="height" secondItem="OvW-Qk-peA" secondAttribute="height" id="GkZ-tP-G9g"/>
+                <constraint firstItem="GCb-Jy-AXa" firstAttribute="leading" secondItem="OvW-Qk-peA" secondAttribute="leading" id="ILe-cV-uaO"/>
+                <constraint firstItem="GCb-Jy-AXa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="37" id="Lpd-cD-Z1V"/>
+                <constraint firstItem="OvW-Qk-peA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="169" id="Q5R-fP-3Co"/>
+                <constraint firstItem="OvW-Qk-peA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QDA-Bo-xJH"/>
+                <constraint firstItem="bKv-UR-gMS" firstAttribute="top" secondItem="OvW-Qk-peA" secondAttribute="bottom" constant="32" id="S0g-Ka-3E9"/>
+                <constraint firstItem="nKM-Sb-QbJ" firstAttribute="height" secondItem="bKv-UR-gMS" secondAttribute="height" id="Sk3-ef-QJX"/>
+                <constraint firstItem="OvW-Qk-peA" firstAttribute="top" secondItem="GCb-Jy-AXa" secondAttribute="bottom" constant="70" id="W3t-cW-oPO"/>
+                <constraint firstItem="nKM-Sb-QbJ" firstAttribute="trailing" secondItem="NgE-a4-IkY" secondAttribute="trailing" id="WeT-C8-8pE"/>
+                <constraint firstItem="nKM-Sb-QbJ" firstAttribute="leading" secondItem="NgE-a4-IkY" secondAttribute="leading" id="Xmo-TH-KcP"/>
+                <constraint firstItem="GCb-Jy-AXa" firstAttribute="trailing" secondItem="OvW-Qk-peA" secondAttribute="trailing" id="dz0-zb-3Id"/>
+                <constraint firstItem="bKv-UR-gMS" firstAttribute="width" secondItem="OvW-Qk-peA" secondAttribute="height" multiplier="315:44" id="fiN-W9-pbY"/>
+                <constraint firstItem="bKv-UR-gMS" firstAttribute="width" secondItem="OvW-Qk-peA" secondAttribute="width" id="iSK-h7-uKx"/>
+                <constraint firstItem="nKM-Sb-QbJ" firstAttribute="width" secondItem="bKv-UR-gMS" secondAttribute="height" multiplier="315:44" id="uM8-FF-55y"/>
+                <constraint firstItem="nKM-Sb-QbJ" firstAttribute="top" secondItem="bKv-UR-gMS" secondAttribute="bottom" constant="32" id="vBV-d0-Puo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="147.97601199400302"/>
+        </view>
+    </objects>
+</document>

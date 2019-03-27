@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ca-Ip-WWx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pursuit Tab View Controller-->
+        <scene sceneID="pEp-DX-78J">
+            <objects>
+                <tabBarController storyboardIdentifier="PursuitTabViewController" automaticallyAdjustsScrollViewInsets="NO" id="2Vn-ZD-Eaq" customClass="PursuitTabViewController" customModule="ThePursuit" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KjU-mR-jNe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2IJ-oh-81Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="148"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="qf3-WC-CTa">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="3ca-Ip-WWx" customClass="SignUpViewController" customModule="FellowBlogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ePz-U6-ef6" customClass="SignUpView" customModule="FellowBlogger" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YcY-eU-cyd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="and-8M-U8i"/>
+                    <connections>
+                        <outlet property="signUpView" destination="ePz-U6-ef6" id="vF7-sv-dnR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgJ-ms-ro9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3489" y="148"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Hb0-mo-vA1">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="6yu-Lw-e0N" customClass="LoginViewController" customModule="FellowBlogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZd-aq-pgp" customClass="LoginInView" customModule="FellowBlogger" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="vNR-TI-EKG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nyh-D7-7o8"/>
+                    <connections>
+                        <outlet property="loginView" destination="xZd-aq-pgp" id="gmJ-QN-JH9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRN-Zf-1Z5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2254" y="148"/>
+        </scene>
+    </scenes>
+</document>
