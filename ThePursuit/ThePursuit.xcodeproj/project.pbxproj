@@ -30,9 +30,7 @@
 		2EA221C8224BFB5C00BBAE5D /* PAUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221C7224BFB5C00BBAE5D /* PAUser.swift */; };
 		2EA221CA224BFD7B00BBAE5D /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221C9224BFD7B00BBAE5D /* FirestoreService.swift */; };
 		2EA221CC224C027A00BBAE5D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221CB224C027A00BBAE5D /* Date+Extension.swift */; };
-		2EA221CE224C02A000BBAE5D /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221CD224C02A000BBAE5D /* String+Date.swift */; };
 		2EA221D1224C062F00BBAE5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EA221D0224C062F00BBAE5D /* GoogleService-Info.plist */; };
-		2EA221D3224C072D00BBAE5D /* Alert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221D2224C072D00BBAE5D /* Alert+Extensions.swift */; };
 		2EA221D7224C094C00BBAE5D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221D5224C094C00BBAE5D /* SignUpViewController.swift */; };
 		2EA221DA224C095700BBAE5D /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA221D9224C095700BBAE5D /* LoginView.xib */; };
 		2EA221DC224C095D00BBAE5D /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA221DB224C095D00BBAE5D /* SignUpView.xib */; };
@@ -40,6 +38,8 @@
 		2EA221E0224C0AE100BBAE5D /* LoginInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221DF224C0AE100BBAE5D /* LoginInView.swift */; };
 		2EA221E2224C0AE600BBAE5D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221E1224C0AE600BBAE5D /* SignUpView.swift */; };
 		2EA221E4224C0DC500BBAE5D /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221E3224C0DC500BBAE5D /* Notes.swift */; };
+		2EA221E6224C16F200BBAE5D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221E5224C16F200BBAE5D /* String+Extension.swift */; };
+		2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221E7224C171000BBAE5D /* Alert+Extension.swift */; };
 		9D25DA3F5BC8D4755532850F /* Pods_ThePursuit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CF7DC7D6878511037C2EA9 /* Pods_ThePursuit.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,9 +69,7 @@
 		2EA221C7224BFB5C00BBAE5D /* PAUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAUser.swift; sourceTree = "<group>"; };
 		2EA221C9224BFD7B00BBAE5D /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		2EA221CB224C027A00BBAE5D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		2EA221CD224C02A000BBAE5D /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Date.swift"; path = "/Users/AshliRankin/Desktop/ThePursuitApp/ThePursuit/ThePursuit/FirebaseServices/String+Date.swift"; sourceTree = "<absolute>"; };
 		2EA221D0224C062F00BBAE5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2EA221D2224C072D00BBAE5D /* Alert+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Alert+Extensions.swift"; path = "/Users/AshliRankin/Desktop/ThePursuitApp/ThePursuit/ThePursuit/Extension/Alert+Extensions.swift"; sourceTree = "<absolute>"; };
 		2EA221D5224C094C00BBAE5D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2EA221D9224C095700BBAE5D /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		2EA221DB224C095D00BBAE5D /* SignUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
@@ -79,6 +77,8 @@
 		2EA221DF224C0AE100BBAE5D /* LoginInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInView.swift; sourceTree = "<group>"; };
 		2EA221E1224C0AE600BBAE5D /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2EA221E3224C0DC500BBAE5D /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		2EA221E5224C16F200BBAE5D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		2EA221E7224C171000BBAE5D /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 		8129AA1A1136751ACA6FDB45 /* Pods-ThePursuit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePursuit.debug.xcconfig"; path = "Target Support Files/Pods-ThePursuit/Pods-ThePursuit.debug.xcconfig"; sourceTree = "<group>"; };
 		8A781B34A661932125A06EB9 /* Pods-ThePursuit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePursuit.release.xcconfig"; path = "Target Support Files/Pods-ThePursuit/Pods-ThePursuit.release.xcconfig"; sourceTree = "<group>"; };
 		90CF7DC7D6878511037C2EA9 /* Pods_ThePursuit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThePursuit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,7 +181,6 @@
 		2EA221A7224BE65500BBAE5D /* General */ = {
 			isa = PBXGroup;
 			children = (
-				2EA22186224BE26C00BBAE5D /* GeneralViewController.swift */,
 				2EA221BE224BF96100BBAE5D /* GeneralControllers */,
 				2EA221BD224BF95200BBAE5D /* GeneralViews */,
 			);
@@ -226,6 +225,7 @@
 		2EA221BE224BF96100BBAE5D /* GeneralControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2EA22186224BE26C00BBAE5D /* GeneralViewController.swift */,
 			);
 			path = GeneralControllers;
 			sourceTree = "<group>";
@@ -271,14 +271,22 @@
 		2EA221CF224C02AB00BBAE5D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2EA221CD224C02A000BBAE5D /* String+Date.swift */,
-				2EA221D2224C072D00BBAE5D /* Alert+Extensions.swift */,
+				2EA221E7224C171000BBAE5D /* Alert+Extension.swift */,
+				2EA221E5224C16F200BBAE5D /* String+Extension.swift */,
 				2EA221CB224C027A00BBAE5D /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
 		2EA221D4224C094C00BBAE5D /* EntranceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2EA221E9224C175C00BBAE5D /* LoginAndSignUp */,
+			);
+			path = EntranceControllers;
+			sourceTree = "<group>";
+		};
+		2EA221E9224C175C00BBAE5D /* LoginAndSignUp */ = {
 			isa = PBXGroup;
 			children = (
 				2EA221DB224C095D00BBAE5D /* SignUpView.xib */,
@@ -288,7 +296,7 @@
 				2EA221DF224C0AE100BBAE5D /* LoginInView.swift */,
 				2EA221D5224C094C00BBAE5D /* SignUpViewController.swift */,
 			);
-			path = EntranceControllers;
+			path = LoginAndSignUp;
 			sourceTree = "<group>";
 		};
 		8CB3872A0C32B99B2F72882C /* Frameworks */ = {
@@ -453,15 +461,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EA221CE224C02A000BBAE5D /* String+Date.swift in Sources */,
 				2EA221E4224C0DC500BBAE5D /* Notes.swift in Sources */,
+				2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */,
 				2EA221E0224C0AE100BBAE5D /* LoginInView.swift in Sources */,
 				2EA221B3224BEEA800BBAE5D /* GeneralPostCell.swift in Sources */,
 				2EA221A9224BE6E800BBAE5D /* LessonWebViewController.swift in Sources */,
 				2EA221E2224C0AE600BBAE5D /* SignUpView.swift in Sources */,
 				2EA221A2224BE4F300BBAE5D /* ProfileViewController.swift in Sources */,
-				2EA221D3224C072D00BBAE5D /* Alert+Extensions.swift in Sources */,
 				2EA221B1224BEE1F00BBAE5D /* ProfileCells.swift in Sources */,
+				2EA221E6224C16F200BBAE5D /* String+Extension.swift in Sources */,
 				2EA221C5224BFA5700BBAE5D /* StorageService.swift in Sources */,
 				2EA22187224BE26C00BBAE5D /* GeneralViewController.swift in Sources */,
 				2EA221CA224BFD7B00BBAE5D /* FirestoreService.swift in Sources */,
