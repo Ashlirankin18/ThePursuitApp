@@ -10,13 +10,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    //Using PAUser Model
+    //unwind from note view?
+    
   @IBOutlet weak var profileTableView: UITableView!
-  
   let cellId = "ProfileCell"
   
   override func viewDidLoad() {
         super.viewDidLoad()
-    print("it begins")
+    
       
     }
 

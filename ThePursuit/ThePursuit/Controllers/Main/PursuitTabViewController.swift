@@ -19,8 +19,9 @@ class PursuitTabViewController: UITabBarController {
 
   func setupViewControllers(){
     let generalController = UIStoryboard(name: "General", bundle: nil).instantiateViewController(withIdentifier: "GeneralViewController") as!  GeneralViewController
-    
+    let profileController = UIStoryboard(name: "ProfileStoryboard", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
     viewControllers = [generalController]
+    viewControllers = [profileController]
     
   }
 
