@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileCells: UITableViewCell {
+class ProfileCell: UITableViewCell {
 
   @IBOutlet weak var profileView: PostView!
   
