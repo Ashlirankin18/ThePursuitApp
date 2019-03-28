@@ -29,6 +29,7 @@ class ProfileViewController: UIViewController {
     
     
 private let authServices = AppDelegate.authService
+    
 private var pursuitUser: PAUser!
     private var favorites = [Post](){
         didSet{
@@ -40,9 +41,7 @@ private var pursuitUser: PAUser!
     
   override func viewDidLoad() {
         super.viewDidLoad()
-    profileTableView.tableHeaderView = profileHeaderView
-    profileTableView.dataSource = self
-    profileTableView.delegate = self
+
     configureTableView()
     }
 private func configureTableView(){
@@ -75,15 +74,15 @@ private func configureTableView(){
 
 extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return favorites.count
+      return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as? ProfileCell else {
              fatalError("ProfileCell not found")
         }
-        let favoriteItem = favorites[indexPath.row]
-        cell.textLabel?.text = favoriteItem.postTitle
+        let favoriteItem = [indexPath.row]
+        cell.textLabel?.text = "favoriteItem.postTitle"
         return cell
     }
     
@@ -92,7 +91,7 @@ extension ProfileViewController: UITableViewDataSource {
 
 extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: cellId, sender: indexPath)
+        performSegue(withIdentifier: "ProfileCell", sender: indexPath)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.PostCellHeight
