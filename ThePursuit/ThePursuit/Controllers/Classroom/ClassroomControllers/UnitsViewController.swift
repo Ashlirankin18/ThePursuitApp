@@ -97,4 +97,8 @@ class UnitsViewController: UITableViewController {
         }
     }
 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let url = URL(string: "\()")
+    }
 }
