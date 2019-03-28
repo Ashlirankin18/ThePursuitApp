@@ -60,7 +60,6 @@ class UnitsViewController: UITableViewController, SFSafariViewControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         getUnits()
-//        setGradientBackground(colorTop: UIColor(displayP3Red: 66, green: 66, blue: 234, alpha: 0), colorBottom: UIColor(displayP3Red: 255, green: 255, blue: 255, alpha: 0))
         setTableViewBackgroundGradient(sender: self, UIColor(hexString: "#4242EA"), UIColor(hexString: "#FFFFFF"))
     }
     
@@ -116,17 +115,25 @@ class UnitsViewController: UITableViewController, SFSafariViewControllerDelegate
         }
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = UIColor(hexString: "#4242EA")
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.white
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             guard let url = URL(string: units[indexPath.row].unitLink) else {return}
             let safariVC = SFSafariViewController(url: url)
             present(safariVC, animated: true, completion: nil)
             safariVC.delegate = self
+            safariVC.preferredBarTintColor = .black
         } else {
             guard let url = URL(string: resources[indexPath.row].resourceLink) else {return}
             let safariVC = SFSafariViewController(url: url)
             present(safariVC, animated: true, completion: nil)
             safariVC.delegate = self
+            safariVC.preferredBarTintColor = .black
         }
         
     }
