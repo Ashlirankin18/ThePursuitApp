@@ -94,7 +94,7 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.17.0)
   - GTMSessionFetcher/Core (1.2.1)
-  - Kingfisher (5.2.0)
+  - Kingfisher (5.3.1)
   - leveldb-library (1.20)
   - MarkdownView (1.5.0)
   - nanopb (0.3.901):
@@ -153,7 +153,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": e76441995900ac90e9bd98644ab4733f12521edf
   gRPC-Core: 4028031ed2c5267cca0d846c876d8046b1ecb9b6
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
-  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MarkdownView: 5bbee438c823db1cd189002d44c84fa909b3a896
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
@@ -162,4 +162,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: eb46d78c51e3a08dc38d89fb749d7fe117f0d75d
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.6.1

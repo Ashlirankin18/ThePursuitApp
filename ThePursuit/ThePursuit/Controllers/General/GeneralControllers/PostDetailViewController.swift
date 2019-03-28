@@ -7,29 +7,28 @@
 //
 
 import UIKit
-import Kingfisher
 import Firebase
 
 class PostDetailViewController: UIViewController {
-
-    
+    var post: Post!
+    lazy var postView: PostView = {
+    let pv = PostView()
+        pv.favoriteButton.addTarget(self, action: #selector(addFav), for: .touchUpInside)
+    return pv
+    }()
     private let authservice = AppDelegate.authService
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.addSubview(postView)
+postView.frame = self.view.bounds
+       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func addFav() {
+        
     }
-    */
+   
 
 }
