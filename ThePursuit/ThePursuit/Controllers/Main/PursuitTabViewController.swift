@@ -19,13 +19,11 @@ class PursuitTabViewController: UITabBarController {
 
   func setupViewControllers(){
     let generalController = UIStoryboard(name: "General", bundle: nil).instantiateViewController(withIdentifier: "GeneralViewController") as!  GeneralViewController
-    
-    
-    
     let searchController = UINavigationController(rootViewController: SearchController())
     searchController.title = "Notes"
-    
     viewControllers = [generalController,searchController]
+    generalController.title = "General"
+    generalController.tabBarItem.image = #imageLiteral(resourceName: "home.png")
     
   }
 

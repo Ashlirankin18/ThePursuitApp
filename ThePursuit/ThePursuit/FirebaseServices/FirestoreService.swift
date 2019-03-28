@@ -23,6 +23,7 @@ struct PAUserCollectionKeys {
 
 struct PostCollectionKeys {
   static let CollectionKey = "posts"
+    static let PostTitleKey = "postTitle"
   static let PostDescriptionKey = "postDescription"
   static let PosterId = "posterId"
   static let CreatedDateKey = "createdDate"
@@ -96,6 +97,7 @@ final class DBService {
       .document(post.postId).setData([
         PostCollectionKeys.CreatedDateKey     : post.createdDate,
        PostCollectionKeys.PosterId     : post.posterId,
+       PostCollectionKeys.PostTitleKey : post.postTitle,
        PostCollectionKeys.PostDescriptionKey  : post.postDescription,
         PostCollectionKeys.ImageURLKey        : post.imageURL,
         PostCollectionKeys.DocumentIdKey      : post.postId

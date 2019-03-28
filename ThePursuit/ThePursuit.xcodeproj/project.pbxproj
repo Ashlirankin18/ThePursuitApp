@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DE28EE1224D0E65005BF3AD /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE28EE0224D0E65005BF3AD /* PostDetailViewController.swift */; };
 		2EA22185224BE26C00BBAE5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA22184224BE26C00BBAE5D /* AppDelegate.swift */; };
 		2EA22187224BE26C00BBAE5D /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA22186224BE26C00BBAE5D /* GeneralViewController.swift */; };
 		2EA2218A224BE26C00BBAE5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA22188224BE26C00BBAE5D /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DE28EE0224D0E65005BF3AD /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		2EA22181224BE26C00BBAE5D /* ThePursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThePursuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA22184224BE26C00BBAE5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EA22186224BE26C00BBAE5D /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				2EA22186224BE26C00BBAE5D /* GeneralViewController.swift */,
+				0DE28EE0224D0E65005BF3AD /* PostDetailViewController.swift */,
 			);
 			path = GeneralControllers;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EA221E4224C0DC500BBAE5D /* Notes.swift in Sources */,
+				0DE28EE1224D0E65005BF3AD /* PostDetailViewController.swift in Sources */,
 				2EA221EB224C2D5B00BBAE5D /* Units.swift in Sources */,
 				2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */,
 				2EA221F4224C443600BBAE5D /* NotesResultView.swift in Sources */,
