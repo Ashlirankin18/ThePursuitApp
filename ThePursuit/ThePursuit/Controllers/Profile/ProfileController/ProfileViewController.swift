@@ -12,22 +12,32 @@
 import UIKit
 import Kingfisher
 
+protocol ProfileSignOutDelegate: AnyObject {
+    func didSignOut(_ profileVC: ProfileViewController)
+}
+
 class ProfileViewController: UIViewController {
+    
+    weak var delegate: ProfileSignOutDelegate?
 
   @IBOutlet weak var profileTableView: UITableView!
   let cellId = "ProfileCell"
-  
     public lazy var profileHeaderView: ProfileHeaderView = {
         let headerView = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 240))
-        
         return headerView
     }()
     
+    
 private let authServices = AppDelegate.authService
-private var favorites = [Post]()
-
 private var pursuitUser: PAUser!
-  
+    private var favorites = [Post](){
+        didSet{
+            DispatchQueue.main.async {
+                self.profileTableView.reloadData()
+            }
+        }
+    }
+    
   override func viewDidLoad() {
         super.viewDidLoad()
     profileTableView.tableHeaderView = profileHeaderView
@@ -35,7 +45,7 @@ private var pursuitUser: PAUser!
     profileTableView.delegate = self
     configureTableView()
     }
-    private func configureTableView(){
+private func configureTableView(){
         profileTableView.tableHeaderView = profileHeaderView
         profileTableView.dataSource = self
         profileTableView.delegate = self
@@ -43,8 +53,24 @@ private var pursuitUser: PAUser!
         }
     
     private func updateProfileUI(){
+        guard let user = authServices.getCurrentUser() else {
+            print("no logged user")
+            return
+        }
+        DBService.fetchPostCreator(userId: user.displayName!) { (error, poster) in
+            if let error = error {
+                print("no annoucements posted")
+            } else if let poster = poster {
+                
+            }
+        }
         
     }
+    
+    @IBAction func signOutButtonPressed(_ sender: UIBarButtonItem) {
+        delegate?.didSignOut(self)
+    }
+    
 }
 
 extension ProfileViewController: UITableViewDataSource {
@@ -58,7 +84,6 @@ extension ProfileViewController: UITableViewDataSource {
         }
         let favoriteItem = favorites[indexPath.row]
         cell.textLabel?.text = favoriteItem.postTitle
-        
         return cell
     }
     
@@ -67,7 +92,7 @@ extension ProfileViewController: UITableViewDataSource {
 
 extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "Show Post Details", sender: indexPath)
+        performSegue(withIdentifier: cellId, sender: indexPath)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.BlogCellHeight

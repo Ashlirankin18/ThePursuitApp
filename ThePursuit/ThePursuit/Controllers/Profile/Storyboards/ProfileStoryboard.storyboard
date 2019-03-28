@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="5b9-be-X1n">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="V2a-rS-w0j" customClass="ProfileViewController" customModule="ThePursuit" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +41,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5uF-DZ-932"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Kq-85-6XB"/>
+                    <navigationItem key="navigationItem" title="Profile" id="2Kq-85-6XB">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="B7b-Pd-mWy">
+                            <connections>
+                                <action selector="signOutButtonPressed:" destination="V2a-rS-w0j" id="ouh-qh-Bd5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="profileTableView" destination="r6g-op-4b7" id="Bec-PH-0ge"/>
                     </connections>
@@ -66,7 +72,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayy-Q6-S8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317.60000000000002" y="123.68815592203899"/>
+            <point key="canvasLocation" x="431" y="124"/>
         </scene>
     </scenes>
 </document>
