@@ -9,10 +9,10 @@
 import UIKit
 
 class PursuitTabViewController: UITabBarController {
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
       setupViewControllers()
     }
     
@@ -31,12 +31,15 @@ class PursuitTabViewController: UITabBarController {
    
     generalController.title = "General"
     generalController.tabBarItem.image = #imageLiteral(resourceName: "home.png")
-
-  
     
- viewControllers = [generalController, classroomViewController,searchController,profileController]
-   
-
-  }
+    
+    let navigationController = UINavigationController(rootViewController: classroomViewController)
+    
+    navigationController.navigationBar.prefersLargeTitles = true
+  classroomViewController.navigationItem.title = "Classroom"
+    
+ viewControllers = [generalController, navigationController,searchController,profileController]
+    
+    }
 
 }
