@@ -39,7 +39,6 @@ class GeneralViewController: UIViewController {
         super.viewDidLoad()
         generalCollection.delegate = self
         generalCollection.dataSource = self
-        //generalCollection.register(GeneralPostCell.self, forCellReuseIdentifier: cellId)
         fetchPosts()
     }
     
@@ -71,13 +70,13 @@ extension GeneralViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = generalCollection.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? GeneralPostCell else { return UITableViewCell()}
-       // let post = posts[indexPath.row]
+ 
         cell.selectionStyle = .none
         cell.postView.fullName.text = "jeff"
         cell.postView.createdDate.text = "today"
         cell.postView.postDescription.text = "somtehing"
         cell.postView.postImage.image = #imageLiteral(resourceName: "placeholder.png")
-        //cell.postView
+     
         return cell
     }
     
@@ -90,7 +89,7 @@ extension GeneralViewController: UITableViewDataSource {
 
 extension GeneralViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return self.view.frame.width
     }
     
     
