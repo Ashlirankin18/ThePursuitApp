@@ -12,7 +12,7 @@ import Firebase
 
 extension DBService {
     
-static public func fetchPostCreator(userId: String, completion: @escaping (Error?, PAUser?) -> Void) {
+static public func fetchUser(userId: String, completion: @escaping (Error?, PAUser?) -> Void) {
     DBService.firestoreDB
         .collection(PAUserCollectionKeys.CollectionKey)
         .whereField(PAUserCollectionKeys.PAUserIdKey, isEqualTo: userId)
