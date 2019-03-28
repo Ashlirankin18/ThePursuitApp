@@ -7,8 +7,13 @@
 //
 
 import UIKit
-
+protocol ProfileHeaderViewDelegate: AnyObject {
+    func willSignOut(_ profileHeaderView: ProfileHeaderView)
+    func willEditProfile(_ profileHeaderView: ProfileHeaderView)
+}
 class ProfileHeaderView: UIView {
+    
+    weak var delegate: ProfileHeaderViewDelegate?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var profileImageView: CircularImageView!
@@ -34,6 +39,14 @@ class ProfileHeaderView: UIView {
         addSubview(contentView)
         contentView.frame = bounds
     
+    }
+    
+    @IBAction func editButtonPressed(_ sender: UIButton) {
+        delegate?.willEditProfile(self)
+    }
+    
+    @IBAction func signOutButtonPressed(_ sender: UIButton) {
+        delegate?.willEditProfile(self)
     }
     
 }

@@ -12,13 +12,10 @@
 import UIKit
 import Kingfisher
 
-protocol ProfileSignOutDelegate: AnyObject {
-    func didSignOut(_ profileVC: ProfileViewController)
-}
 
 class ProfileViewController: UIViewController {
     
-    weak var delegate: ProfileSignOutDelegate?
+    
 
   @IBOutlet weak var profileTableView: UITableView!
   let cellId = "ProfileCell"
@@ -76,9 +73,7 @@ private func configureTableView(){
         
     }
     
-    @IBAction func signOutButtonPressed(_ sender: UIBarButtonItem) {
-        delegate?.didSignOut(self)
-    }
+
     
 }
 
@@ -92,7 +87,9 @@ extension ProfileViewController: UITableViewDataSource {
              fatalError("ProfileCell not found")
         }
         let favoriteItem = favorites[indexPath.row]
-        cell.textLabel?.text = favoriteItem.postTitle
+        cell.profileView.postDescription.text = favoriteItem.postDescription
+        cell.profileView.createdDate.text = favoriteItem.createdDate
+        //cell.profileView.postImage.image
         return cell
     }
     
@@ -106,4 +103,16 @@ extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.PostCellHeight
     }
+}
+
+extension ProfileViewController: ProfileHeaderViewDelegate {
+    func willSignOut(_ profileHeaderView: ProfileHeaderView) {
+        authServices.signOut()
+    }
+    
+    func willEditProfile(_ profileHeaderView: ProfileHeaderView) {
+        performSegue(withIdentifier: "Show Edit Profile", sender: nil)
+    }
+    
+    
 }

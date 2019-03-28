@@ -41,13 +41,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5uF-DZ-932"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="2Kq-85-6XB">
-                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="B7b-Pd-mWy">
-                            <connections>
-                                <action selector="signOutButtonPressed:" destination="V2a-rS-w0j" id="ouh-qh-Bd5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Profile" id="2Kq-85-6XB"/>
                     <connections>
                         <outlet property="profileTableView" destination="r6g-op-4b7" id="Bec-PH-0ge"/>
                     </connections>
