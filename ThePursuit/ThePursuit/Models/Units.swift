@@ -11,14 +11,17 @@ import Foundation
 struct Units{
   let unitLink:String
   let unitName:String
+  let tag:String
   
-  init(unitLink:String,unitName:String){
+    init(unitLink:String,unitName:String,tag:String){
     self.unitLink = unitLink
     self.unitName = unitName
+    self.tag = tag
   }
   
   init(dict:[String:Any]){
     self.unitName = dict[UnitsCollectionKeys.unitName] as? String ?? "no unit name found"
     self.unitLink = dict[UnitsCollectionKeys.unitLink] as? String ?? "no unit link found"
+    self.tag = dict[UnitsCollectionKeys.tag] as? String ?? "no unit tag found"
   }
 }

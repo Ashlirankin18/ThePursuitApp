@@ -17,11 +17,26 @@ class UnitsViewController: UITableViewController {
     private var listener: ListenerRegistration!
     private var authservice = AppDelegate.authService
     
-    private var units = [Units]() {
+    private var units = [Units]()
+    
+    
+    private var resources = [Resources]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    @objc private func getResources() {
+        listener = DBService.firestoreDB
+            .collection("classes").document("ytQtzAfmMgFIbaGt9IFq").collection("resources")
+            .addSnapshotListener { [weak self] (snapshot, error) in
+                if let error = error {
+                    print("failed to fetch resources with error: \(error.localizedDescription)")
+                } else if let snapshot = snapshot {
+                    self?.resources = (snapshot.documents.map { Resources(dict: $0.data()) })
+                }
         }
     }
 
@@ -36,6 +51,7 @@ class UnitsViewController: UITableViewController {
                     self?.units = (snapshot.documents.map { Units(dict: $0.data()) }).sorted{
                         $0.unitName < $1.unitName
                     }
+                    self?.getResources()
                 }
           }
     }
@@ -48,25 +64,38 @@ class UnitsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        
-        cell.textLabel?.text = units[indexPath.row].unitName
+        if indexPath.section == 0 {
+            cell.textLabel?.text = units[indexPath.row].unitName
+            
+        } else {
+            cell.textLabel?.text = resources[indexPath.row].resourceName
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return units.count
+        if section == 0 {
+            return units.count
+        }else{
+            return resources.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
     
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 2
-//    }
-//
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Units"
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+           return  "Units"
+            
+        } else  {
+             return "Resources"
+        }
+    }
 
 }
