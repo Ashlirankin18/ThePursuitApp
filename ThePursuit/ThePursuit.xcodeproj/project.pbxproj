@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		01EF5829224C58CA0054A37E /* Classroom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EF5828224C58CA0054A37E /* Classroom.storyboard */; };
+
 		0DE28EE1224D0E65005BF3AD /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE28EE0224D0E65005BF3AD /* PostDetailViewController.swift */; };
+
 		2EA22185224BE26C00BBAE5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA22184224BE26C00BBAE5D /* AppDelegate.swift */; };
 		2EA22187224BE26C00BBAE5D /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA22186224BE26C00BBAE5D /* GeneralViewController.swift */; };
 		2EA2218A224BE26C00BBAE5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA22188224BE26C00BBAE5D /* Main.storyboard */; };
@@ -61,7 +65,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		01EF5828224C58CA0054A37E /* Classroom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Classroom.storyboard; sourceTree = SOURCE_ROOT; };
+
 		0DE28EE0224D0E65005BF3AD /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+
 		2EA22181224BE26C00BBAE5D /* ThePursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThePursuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA22184224BE26C00BBAE5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EA22186224BE26C00BBAE5D /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +241,7 @@
 		2EA221BB224BF8FC00BBAE5D /* ClassroomViews */ = {
 			isa = PBXGroup;
 			children = (
+				01EF5828224C58CA0054A37E /* Classroom.storyboard */,
 			);
 			path = ClassroomViews;
 			sourceTree = "<group>";
@@ -446,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EA221DC224C095D00BBAE5D /* SignUpView.xib in Resources */,
+				01EF5829224C58CA0054A37E /* Classroom.storyboard in Resources */,
 				2EA22192224BE26C00BBAE5D /* LaunchScreen.storyboard in Resources */,
 				912E2ACF224C2C8D0087D294 /* ProfileViewHeader.xib in Resources */,
 				2EA221B6224BF6EA00BBAE5D /* General.storyboard in Resources */,
