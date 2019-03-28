@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		01EF5829224C58CA0054A37E /* Classroom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01EF5828224C58CA0054A37E /* Classroom.storyboard */; };
-
 		0DE28EE1224D0E65005BF3AD /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE28EE0224D0E65005BF3AD /* PostDetailViewController.swift */; };
-
 		2EA22185224BE26C00BBAE5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA22184224BE26C00BBAE5D /* AppDelegate.swift */; };
 		2EA22187224BE26C00BBAE5D /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA22186224BE26C00BBAE5D /* GeneralViewController.swift */; };
 		2EA2218A224BE26C00BBAE5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA22188224BE26C00BBAE5D /* Main.storyboard */; };
@@ -47,29 +44,26 @@
 		2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221E7224C171000BBAE5D /* Alert+Extension.swift */; };
 		2EA221EB224C2D5B00BBAE5D /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221EA224C2D5B00BBAE5D /* Units.swift */; };
 		2EA221ED224C303B00BBAE5D /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221EC224C303B00BBAE5D /* Resources.swift */; };
-
 		2EA221F0224C427200BBAE5D /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221EF224C427200BBAE5D /* SearchController.swift */; };
 		2EA221F4224C443600BBAE5D /* NotesResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221F3224C443600BBAE5D /* NotesResultView.swift */; };
 		2EA221F6224C8CF400BBAE5D /* AddNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221F5224C8CF400BBAE5D /* AddNoteController.swift */; };
 		2EA221F8224C8D2600BBAE5D /* AddNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA221F7224C8D2600BBAE5D /* AddNoteView.xib */; };
 		2EA221FA224C8E4600BBAE5D /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221F9224C8E4600BBAE5D /* AddNoteView.swift */; };
-
 		912E2AC7224C20050087D294 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912E2AC6224C20050087D294 /* ProfileStoryboard.storyboard */; };
 		912E2AC9224C2B090087D294 /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E2AC8224C2B090087D294 /* IBDesignableView.swift */; };
 		912E2ACB224C2B430087D294 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E2ACA224C2B430087D294 /* Constants.swift */; };
 		912E2ACD224C2C6B0087D294 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E2ACC224C2C6B0087D294 /* ProfileHeaderView.swift */; };
 		912E2ACF224C2C8D0087D294 /* ProfileViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 912E2ACE224C2C8D0087D294 /* ProfileViewHeader.xib */; };
 		912E2AD1224D16ED0087D294 /* FireServiceExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E2AD0224D16ED0087D294 /* FireServiceExtension .swift */; };
-
+		91720551224D48BF0011A484 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91720550224D48BF0011A484 /* EditProfileVC.swift */; };
+		91720553224D4E9C0011A484 /* EditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91720552224D4E9C0011A484 /* EditVC.xib */; };
+		91720555224D4EC10011A484 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91720554224D4EC10011A484 /* EditProfileView.swift */; };
 		9D25DA3F5BC8D4755532850F /* Pods_ThePursuit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CF7DC7D6878511037C2EA9 /* Pods_ThePursuit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
 		01EF5828224C58CA0054A37E /* Classroom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Classroom.storyboard; sourceTree = SOURCE_ROOT; };
-
 		0DE28EE0224D0E65005BF3AD /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
-
 		2EA22181224BE26C00BBAE5D /* ThePursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThePursuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA22184224BE26C00BBAE5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EA22186224BE26C00BBAE5D /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +115,9 @@
 		912E2ACC224C2C6B0087D294 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		912E2ACE224C2C8D0087D294 /* ProfileViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewHeader.xib; sourceTree = "<group>"; };
 		912E2AD0224D16ED0087D294 /* FireServiceExtension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FireServiceExtension .swift"; sourceTree = "<group>"; };
+		91720550224D48BF0011A484 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		91720552224D4E9C0011A484 /* EditVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditVC.xib; sourceTree = "<group>"; };
+		91720554224D4EC10011A484 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +275,7 @@
 		2EA221BF224BF98D00BBAE5D /* ProfileViews */ = {
 			isa = PBXGroup;
 			children = (
+				91720554224D4EC10011A484 /* EditProfileView.swift */,
 				2EA221B0224BEE1F00BBAE5D /* ProfileCell.swift */,
 				912E2ACC224C2C6B0087D294 /* ProfileHeaderView.swift */,
 				912E2AC8224C2B090087D294 /* IBDesignableView.swift */,
@@ -289,6 +287,7 @@
 		2EA221C0224BF9B200BBAE5D /* ProfileController */ = {
 			isa = PBXGroup;
 			children = (
+				91720550224D48BF0011A484 /* EditProfileVC.swift */,
 				2EA221A1224BE4F300BBAE5D /* ProfileViewController.swift */,
 				912E2AD0224D16ED0087D294 /* FireServiceExtension .swift */,
 			);
@@ -381,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				912E2ACE224C2C8D0087D294 /* ProfileViewHeader.xib */,
+				91720552224D4E9C0011A484 /* EditVC.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -465,6 +465,7 @@
 				2EA2218A224BE26C00BBAE5D /* Main.storyboard in Resources */,
 				2EA221F8224C8D2600BBAE5D /* AddNoteView.xib in Resources */,
 				2EA221D1224C062F00BBAE5D /* GoogleService-Info.plist in Resources */,
+				91720553224D4E9C0011A484 /* EditVC.xib in Resources */,
 				912E2AC7224C20050087D294 /* ProfileStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,14 +544,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91720551224D48BF0011A484 /* EditProfileVC.swift in Sources */,
 				2EA221E4224C0DC500BBAE5D /* Notes.swift in Sources */,
-
 				912E2AC9224C2B090087D294 /* IBDesignableView.swift in Sources */,
-
 				0DE28EE1224D0E65005BF3AD /* PostDetailViewController.swift in Sources */,
-
 				2EA221EB224C2D5B00BBAE5D /* Units.swift in Sources */,
 				2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */,
+				91720555224D4EC10011A484 /* EditProfileView.swift in Sources */,
 				2EA221F4224C443600BBAE5D /* NotesResultView.swift in Sources */,
 				2EA221F0224C427200BBAE5D /* SearchController.swift in Sources */,
 				2EA221E0224C0AE100BBAE5D /* LoginInView.swift in Sources */,

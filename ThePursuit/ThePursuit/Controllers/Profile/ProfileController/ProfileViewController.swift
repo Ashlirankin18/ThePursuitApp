@@ -18,10 +18,11 @@ class ProfileViewController: UIViewController {
     
 
   @IBOutlet weak var profileTableView: UITableView!
+    
   let cellId = "ProfileCell"
     
     public lazy var profileHeaderView: ProfileHeaderView = {
-        let headerView = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 240))
+        let headerView = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 270))
         return headerView
     }()
     

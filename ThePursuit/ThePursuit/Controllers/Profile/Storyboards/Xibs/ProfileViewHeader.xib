@@ -25,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_male" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-Kh-EIu" customClass="CircularImageView" customModule="ThePursuit" customModuleProvider="target">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-Kh-EIu" customClass="CircularImageView" customModule="ThePursuit" customModuleProvider="target">
                     <rect key="frame" x="16" y="28" width="125" height="125"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="125" id="AdH-Sd-NJs"/>
@@ -36,6 +36,7 @@
                     <rect key="frame" x="151" y="36" width="208" height="35"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="EOh-MV-fj3"/>
                         <constraint firstAttribute="height" constant="35" id="xVz-EY-dHh"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -99,9 +100,6 @@
                         <constraint firstAttribute="height" constant="30" id="Xaa-pP-6z0"/>
                     </constraints>
                     <state key="normal" title="Sign out"/>
-                    <connections>
-                        <action selector="signOutButtonPressed:" destination="-1" eventType="touchUpInside" id="sa7-Oh-xqX"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -122,9 +120,11 @@
                 <constraint firstItem="cio-o6-6Hf" firstAttribute="trailing" secondItem="5e6-IL-UvY" secondAttribute="trailing" id="WyL-5E-E7e"/>
                 <constraint firstItem="9Gt-Uu-QMS" firstAttribute="top" secondItem="5e6-IL-UvY" secondAttribute="bottom" constant="8" id="Y29-dw-SG9"/>
                 <constraint firstItem="fWT-Yq-7Dh" firstAttribute="leading" secondItem="dlM-eH-1Yd" secondAttribute="leading" constant="16" id="a2o-DT-1Eh"/>
-                <constraint firstItem="dlM-eH-1Yd" firstAttribute="bottom" secondItem="9Gt-Uu-QMS" secondAttribute="bottom" constant="344" id="bEV-Fl-gTx"/>
                 <constraint firstItem="Xeh-pt-cGa" firstAttribute="top" secondItem="AMf-4E-M0A" secondAttribute="bottom" constant="8" id="iKv-M7-uf4"/>
+                <constraint firstItem="dlM-eH-1Yd" firstAttribute="trailing" secondItem="AMf-4E-M0A" secondAttribute="trailing" constant="16" id="iTH-Vp-UuY"/>
                 <constraint firstItem="hXc-lz-pAX" firstAttribute="top" secondItem="Xeh-pt-cGa" secondAttribute="bottom" constant="8" id="jdW-cV-Pdg"/>
+                <constraint firstItem="dlM-eH-1Yd" firstAttribute="trailing" secondItem="AMf-4E-M0A" secondAttribute="trailing" constant="16" id="lI9-2y-pzj"/>
+                <constraint firstItem="AMf-4E-M0A" firstAttribute="leading" secondItem="cGC-Kh-EIu" secondAttribute="trailing" constant="10" id="m4g-eM-0e4"/>
                 <constraint firstItem="dlM-eH-1Yd" firstAttribute="trailing" secondItem="hXc-lz-pAX" secondAttribute="trailing" constant="16" id="nhv-x9-hF9"/>
                 <constraint firstItem="9Gt-Uu-QMS" firstAttribute="leading" secondItem="dlM-eH-1Yd" secondAttribute="leading" constant="16" id="oHk-uR-R82"/>
                 <constraint firstItem="dlM-eH-1Yd" firstAttribute="trailing" secondItem="Xeh-pt-cGa" secondAttribute="trailing" constant="16" id="qHg-Ct-Lt9"/>
@@ -141,6 +141,6 @@
         </button>
     </objects>
     <resources>
-        <image name="user_male" width="30" height="30"/>
+        <image name="placeholder" width="512" height="512"/>
     </resources>
 </document>
