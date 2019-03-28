@@ -45,12 +45,14 @@ struct UnitsCollectionKeys{
   static let CollectionKey = "units"
   static let unitName = "unitName"
   static let unitLink = "unitLink"
+    static let tag = "tag"
 }
 
 struct ResourceCollectionKeys{
   static let CollectionKeys = "resources"
   static let resourceName = "resourceName"
   static let resourceLink = "resourceLink"
+    static let tag = "tag"
 }
 struct NotesCollectionKeys{
   static let CollectionKeys = "notes"
@@ -59,6 +61,7 @@ struct NotesCollectionKeys{
   static let TagKey = "tag"
   static let NoteId = "noteId"
   static let PosterId = "posterId"
+  static let title = "title"
 }
 final class DBService {
   private init() {}

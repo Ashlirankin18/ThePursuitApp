@@ -11,10 +11,10 @@ import UIKit
 class NotesResultViews:UIView {
   
   lazy var notesTableView: UITableView = {
-    let tableView = UITableView()
+    let tableView = UITableView(frame: frame, style: .grouped)
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     tableView.backgroundColor = .white
-    
+   
     return tableView
   }()
   let cellId = "SearchCell"

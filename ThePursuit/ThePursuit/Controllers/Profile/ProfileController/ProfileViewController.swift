@@ -11,90 +11,95 @@
 
 import UIKit
 import Kingfisher
-
-protocol ProfileSignOutDelegate: AnyObject {
-    func didSignOut(_ profileVC: ProfileViewController)
-}
-
 class ProfileViewController: UIViewController {
-    
-    weak var delegate: ProfileSignOutDelegate?
 
+  
   @IBOutlet weak var profileTableView: UITableView!
+  
   let cellId = "ProfileCell"
-    public lazy var profileHeaderView: ProfileHeaderView = {
-        let headerView = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 240))
-        return headerView
-    }()
-    
-    
-private let authServices = AppDelegate.authService
-private var pursuitUser: PAUser!
-    private var favorites = [Post](){
-        didSet{
-            DispatchQueue.main.async {
-                self.profileTableView.reloadData()
-            }
-        }
+  
+  public lazy var profileHeaderView: ProfileHeaderView = {
+    let headerView = ProfileHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 270))
+    return headerView
+  }()
+  
+  
+  private let authServices = AppDelegate.authService
+  
+  private var pursuitUser: PAUser?
+  private var favorites = [Post](){
+    didSet{
+      DispatchQueue.main.async {
+        self.profileTableView.reloadData()
+      }
     }
-    
+  }
+  
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
+    configureTableView()
+  }
+  
+  private func configureTableView(){
     profileTableView.tableHeaderView = profileHeaderView
     profileTableView.dataSource = self
     profileTableView.delegate = self
-    configureTableView()
-    }
-private func configureTableView(){
-        profileTableView.tableHeaderView = profileHeaderView
-        profileTableView.dataSource = self
-        profileTableView.delegate = self
-        profileTableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
-        }
     
-    private func updateProfileUI(){
-        guard let user = authServices.getCurrentUser() else {
-            print("no logged user")
+  }
+  
+  private func updateProfileUI(){
+    guard let user = authServices.getCurrentUser() else {
+      print("no logged user")
+      return
+    }
+    DBService.fetchUser(userId: user.uid) { [weak self] (error, profile) in
+      if let error = error {
+        self?.showAlert(title: "Error fetching user", message: error.localizedDescription, actionTitle: "try again?")
+      }
+      else if let profile = profile {
+        self?.pursuitUser = profile
+        self?.profileHeaderView.fullNameLabel.text = self?.pursuitUser?.firstName
+        self?.profileHeaderView.nicknameLabel.text = self?.pursuitUser?.nickname
+        guard let photoURL = profile.photoURL,
+          !photoURL.isEmpty else {
             return
         }
-        DBService.fetchPostCreator(userId: user.displayName!) { (error, poster) in
-            if let error = error {
-                print("no annoucements posted")
-            } else if let poster = poster {
-                
-            }
-        }
-        
+        self?.profileHeaderView.profileImageView.kf.setImage(with: URL(string: profile.photoURL ?? "No photo"), placeholder: #imageLiteral(resourceName: "placeholder"))
+      }
+      
     }
     
-    @IBAction func signOutButtonPressed(_ sender: UIBarButtonItem) {
-        delegate?.didSignOut(self)
-    }
-    
+  }
+  
+  
+  
 }
 
 extension ProfileViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return favorites.count
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return favorites.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as? ProfileCell else {
+      fatalError("ProfileCell not found")
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as? ProfileCell else {
-             fatalError("ProfileCell not found")
-        }
-        let favoriteItem = favorites[indexPath.row]
-        cell.textLabel?.text = favoriteItem.postTitle
-        return cell
-    }
-    
-    
+    let favoriteItem = favorites[indexPath.row]
+    cell.profileView.postDescription.text = favoriteItem.postDescription
+    cell.profileView.createdDate.text = favoriteItem.createdDate
+    //cell.profileView.postImage.image
+    return cell
+  }
+  
+  
 }
 
 extension ProfileViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: cellId, sender: indexPath)
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Constants.PostCellHeight
-    }
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "ProfileCell", sender: indexPath)
+  }
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return Constants.PostCellHeight
+  }
 }
+

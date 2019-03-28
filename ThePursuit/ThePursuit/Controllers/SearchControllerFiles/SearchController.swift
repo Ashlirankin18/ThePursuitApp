@@ -12,6 +12,8 @@ class SearchController: UIViewController {
   
   
   let notesView = NotesResultViews()
+  let authService = AuthService()
+  
   let cellId = "SearchCell"
   var notes = [Notes](){
     didSet{
@@ -25,8 +27,10 @@ class SearchController: UIViewController {
   setupNavigationBar()
     view.addSubview(notesView)
     notesView.notesTableView.dataSource = self
-    
+    notesView.notesTableView.delegate = self
     getNotes()
+    let date = Date.getISOTimestamp()
+    print(date)
   }
   
   func setupNavigationBar(){
@@ -41,12 +45,13 @@ class SearchController: UIViewController {
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addButtonPressed))
   }
   func getNotes(){
-    DBService.firestoreDB.collection(NotesCollectionKeys.CollectionKeys).whereField(NotesCollectionKeys.PosterId, isEqualTo: "admin")
+    guard let user = authService.getCurrentUser() else {return};DBService.firestoreDB.collection(NotesCollectionKeys.CollectionKeys).whereField(NotesCollectionKeys.PosterId, isEqualTo: user.uid )
       .addSnapshotListener {[weak self] (snapshot, error) in
       if let error = error {
         self?.showAlert(title: "Error", message: "there was an error getting your notes: \(error.localizedDescription)", actionTitle: "Tryagain")
       }
       else if let snapshot = snapshot {
+        self?.notes.removeAll()
         snapshot.documents.forEach{
           self?.notes.append(Notes(dict: $0.data()))
         }
@@ -60,8 +65,19 @@ class SearchController: UIViewController {
     addController.modalPresentationStyle = .currentContext
     self.present(UINavigationController(rootViewController: addController), animated: true, completion: nil)
   }
+  
+  func deleteNote(note:Notes){
+    DBService.firestoreDB.collection(NotesCollectionKeys.CollectionKeys).document(note.noteId).delete { (error) in
+      if let error = error {
+        self.showAlert(title: "Error!", message: "there was an error deleting your post: \(error)", actionTitle: "TryAgain")
+      }
+      
+      print("Post sucessfully deleted")
+      
+    }
+  }
 }
-extension SearchController:UITableViewDataSource{
+extension SearchController:UITableViewDataSource,UITableViewDelegate{
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return notes.count
   }
@@ -76,10 +92,36 @@ extension SearchController:UITableViewDataSource{
     return cell
   }
   
-  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+  let note = notes[indexPath.row]
+   let detailledController = AddNoteController()
+    detailledController.navigationItem.title = "MyNote"
+    detailledController.addNoteView.postDescription.text = note.description
+    detailledController.addNoteView.postTitle.text = note.title
+    detailledController.addNoteView.postDescription.isEditable = false
+    detailledController.addNoteView.postTag.isEnabled = false
+        detailledController.addNoteView.postTitle.isEnabled = false
+    
+self.navigationController?.pushViewController(detailledController, animated: true)
+    
+  }
+  func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (delete, indexPath) in
+      let note = self.notes[indexPath.row]
+      self.deleteNote(note: note)
+  }
+    return [deleteAction]
+  }
 }
 extension SearchController:UISearchBarDelegate{
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    notes = notes.filter{$0.tag.lowercased().contains(searchText.lowercased())}
+    
+    if searchBar.text?.isEmpty ?? false  {
+      getNotes()
+    }else{
+      notes = notes.filter{$0.tag.lowercased().contains(searchText.lowercased())}
+    }
+    
   }
 }

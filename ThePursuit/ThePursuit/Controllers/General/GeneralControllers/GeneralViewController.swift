@@ -39,6 +39,7 @@ class GeneralViewController: UIViewController {
         super.viewDidLoad()
         generalCollection.delegate = self
         generalCollection.dataSource = self
+        self.tabBarController?.delegate = UIApplication.shared.delegate as? UITabBarControllerDelegate
         fetchPosts()
     }
     

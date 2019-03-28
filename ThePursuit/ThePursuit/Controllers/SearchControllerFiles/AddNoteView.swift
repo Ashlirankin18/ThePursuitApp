@@ -12,9 +12,8 @@ class AddNoteView:UIView {
   
   @IBOutlet var contentView: UIView!
   
-  @IBOutlet weak var postImageView: UIImageView!
   
-  @IBOutlet weak var postTitle: UILabel!
+  @IBOutlet weak var postTitle: UITextField!
   
   
   @IBOutlet weak var postDescription: UITextView!
@@ -37,7 +36,8 @@ class AddNoteView:UIView {
     Bundle.main.loadNibNamed("AddNoteView", owner: self, options: nil)
      addSubview(contentView)
     contentView.frame = self.bounds
-    
+    postTitle.placeholder = "Enter a title for your note"
+    postTag.placeholder = "enter your text"
   }
   
 }

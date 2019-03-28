@@ -13,36 +13,29 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="asw-S8-Wa3"/>
                 <outlet property="postDescription" destination="fC0-ly-MXU" id="dLs-Hp-9hN"/>
-                <outlet property="postImageView" destination="eKh-c4-ZBf" id="wzg-ik-DgP"/>
                 <outlet property="postTag" destination="MBk-Uk-oN3" id="AJj-de-JZz"/>
-                <outlet property="postTitle" destination="dT0-FR-J0O" id="sno-il-xqC"/>
+                <outlet property="postTitle" destination="m1a-fZ-ozI" id="LK0-KX-sy0"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="522" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="eKh-c4-ZBf">
-                    <rect key="frame" x="20" y="20" width="482" height="265"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="265" id="kiL-E4-Tqi"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titlle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dT0-FR-J0O">
-                    <rect key="frame" x="20" y="299" width="287" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Note" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="fC0-ly-MXU">
-                    <rect key="frame" x="20" y="328" width="482" height="110"/>
+                    <rect key="frame" x="16" y="205" width="343" height="63"/>
                     <color key="backgroundColor" red="0.81774140100188664" green="0.81774140100188664" blue="0.81774140100188664" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1a-fZ-ozI">
+                    <rect key="frame" x="16" y="144" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tag" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBk-Uk-oN3">
-                    <rect key="frame" x="20" y="446" width="482" height="30"/>
+                    <rect key="frame" x="16" y="304" width="343" height="30"/>
                     <color key="backgroundColor" red="1" green="0.4323762941" blue="0.49207027669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -51,28 +44,20 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fC0-ly-MXU" firstAttribute="top" secondItem="dT0-FR-J0O" secondAttribute="bottom" constant="8" symbolic="YES" id="5bQ-8o-SKg"/>
-                <constraint firstItem="fC0-ly-MXU" firstAttribute="trailing" secondItem="eKh-c4-ZBf" secondAttribute="trailing" id="8aM-hN-jB6"/>
-                <constraint firstItem="dT0-FR-J0O" firstAttribute="leading" secondItem="eKh-c4-ZBf" secondAttribute="leading" id="9YC-zn-8Si"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eKh-c4-ZBf" secondAttribute="bottom" constant="195" id="APN-uk-xmt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dT0-FR-J0O" secondAttribute="trailing" constant="215" id="HhU-hw-JGb"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MBk-Uk-oN3" secondAttribute="bottom" constant="4" id="J66-l2-ydd"/>
-                <constraint firstItem="dT0-FR-J0O" firstAttribute="top" secondItem="eKh-c4-ZBf" secondAttribute="bottom" constant="14" id="KKA-qu-TNN"/>
+                <constraint firstItem="fC0-ly-MXU" firstAttribute="top" secondItem="m1a-fZ-ozI" secondAttribute="bottom" constant="31" id="1Ys-4w-LlC"/>
+                <constraint firstItem="m1a-fZ-ozI" firstAttribute="leading" secondItem="fC0-ly-MXU" secondAttribute="leading" id="4MF-qh-MR6"/>
+                <constraint firstItem="m1a-fZ-ozI" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="DPa-ur-TOH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MBk-Uk-oN3" secondAttribute="bottom" constant="333" id="J66-l2-ydd"/>
+                <constraint firstItem="m1a-fZ-ozI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="124" id="Kq0-tH-HSl"/>
                 <constraint firstItem="fC0-ly-MXU" firstAttribute="leading" secondItem="MBk-Uk-oN3" secondAttribute="leading" id="MXi-sx-CKu"/>
                 <constraint firstItem="fC0-ly-MXU" firstAttribute="trailing" secondItem="MBk-Uk-oN3" secondAttribute="trailing" id="SVn-d4-7xQ"/>
-                <constraint firstItem="eKh-c4-ZBf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="SeY-ww-QUX"/>
-                <constraint firstItem="eKh-c4-ZBf" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="WhW-3Z-Mhb"/>
-                <constraint firstItem="MBk-Uk-oN3" firstAttribute="top" secondItem="fC0-ly-MXU" secondAttribute="bottom" constant="8" symbolic="YES" id="dO5-qR-YqQ"/>
-                <constraint firstItem="dT0-FR-J0O" firstAttribute="leading" secondItem="fC0-ly-MXU" secondAttribute="leading" id="yXq-eE-bF6"/>
-                <constraint firstItem="eKh-c4-ZBf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" symbolic="YES" id="zob-FQ-6wJ"/>
+                <constraint firstItem="m1a-fZ-ozI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="bzP-XU-Qhb"/>
+                <constraint firstItem="MBk-Uk-oN3" firstAttribute="top" secondItem="fC0-ly-MXU" secondAttribute="bottom" constant="36" id="dO5-qR-YqQ"/>
+                <constraint firstItem="m1a-fZ-ozI" firstAttribute="trailing" secondItem="fC0-ly-MXU" secondAttribute="trailing" id="tjv-b1-0SQ"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="256" y="62.068965517241381"/>
+            <point key="canvasLocation" x="255.19999999999999" y="61.619190404797607"/>
         </view>
     </objects>
-    <resources>
-        <image name="placeholder" width="512" height="512"/>
-    </resources>
 </document>
