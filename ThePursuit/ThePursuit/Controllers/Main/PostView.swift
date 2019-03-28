@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol PostDetailsDelegate {
+//    func addToFavorites() {
+//    
+//    }
+}
+
 class PostView: UIView {
 
 
@@ -21,14 +27,22 @@ class PostView: UIView {
     @IBOutlet weak var postDescription: UITextView!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-       commonInit()
+        override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
-   
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+        
+    }
+    
     private func commonInit() {
         Bundle.main.loadNibNamed("PostView", owner: self, options: nil)
         addSubview(postContainterView)
         postContainterView.frame = bounds
     }
+    
+    
 }

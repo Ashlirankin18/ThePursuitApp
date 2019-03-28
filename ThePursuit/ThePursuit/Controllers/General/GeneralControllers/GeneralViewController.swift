@@ -61,6 +61,25 @@ class GeneralViewController: UIViewController {
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PostDetails" {
+            guard let cell = sender as? GeneralPostCell,
+                let indexPath = generalCollection.indexPath(for: cell),
+                let postDVC = segue.destination as? PostDetailViewController else {
+                    fatalError("cannot segue to PostDVC")
+            }
+            let post = posts[indexPath.row]
+            postDVC.postView.createdDate.text = cell.postView.createdDate.text
+            postDVC.postView.fullName.text = cell.postView.fullName.text
+            postDVC.postView.postDescription.text = cell.postView.postDescription.text
+            postDVC.postView.postTitle.text = cell.postView.postTitle.text
+            postDVC.postView.postImage.image = cell.postView.postImage.image
+            postDVC.postView.posterProfileImage.image = cell.postView.posterProfileImage.image
+        
+            postDVC.post = post
+        }
+    }
 }
 
 extension GeneralViewController: UITableViewDataSource {
@@ -86,6 +105,6 @@ extension GeneralViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.view.frame.width
     }
-    
+   
     
 }
