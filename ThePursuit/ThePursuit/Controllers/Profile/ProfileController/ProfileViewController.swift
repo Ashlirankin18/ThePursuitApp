@@ -95,6 +95,6 @@ extension ProfileViewController: UITableViewDelegate {
         performSegue(withIdentifier: cellId, sender: indexPath)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Constants.BlogCellHeight
+        return Constants.PostCellHeight
     }
 }

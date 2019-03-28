@@ -10,6 +10,6 @@ import UIKit
 
 struct Constants {
     
-    static let BlogCellHeight: CGFloat = 300.0
-    static let BloggerCellHeight: CGFloat = 200.0
+    static let PostCellHeight: CGFloat = 300.0
+    static let NotesCellHeight: CGFloat = 200.0
 }
