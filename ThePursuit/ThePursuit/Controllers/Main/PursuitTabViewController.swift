@@ -27,7 +27,10 @@ class PursuitTabViewController: UITabBarController {
     generalController.title = "General"
     generalController.tabBarItem.image = #imageLiteral(resourceName: "home.png")
 
-     viewControllers = [generalController, classroomViewController]
+    let profileController = UIStoryboard(name: "ProfileStoryboard", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+    
+    
+    viewControllers = [generalController, classroomViewController, profileController]
   }
 
 }
