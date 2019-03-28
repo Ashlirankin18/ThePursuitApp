@@ -16,8 +16,10 @@ class PostView: UIView {
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var createdDate: UILabel!
     
+    @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var postDescription: UITextView!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

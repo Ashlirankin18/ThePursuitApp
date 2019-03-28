@@ -12,10 +12,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostView" customModule="ThePursuit" customModuleProvider="target">
             <connections>
                 <outlet property="createdDate" destination="pbi-mn-sgE" id="Q2L-V0-uQa"/>
+                <outlet property="favoriteButton" destination="8vr-6f-Cad" id="2ks-vD-tRe"/>
                 <outlet property="fullName" destination="ECM-QP-fFa" id="2D3-lW-UKd"/>
                 <outlet property="postContainterView" destination="iN0-l3-epB" id="mZP-9S-XCX"/>
                 <outlet property="postDescription" destination="Q0q-Dd-8Qi" id="GVf-nt-VLS"/>
                 <outlet property="postImage" destination="jP8-za-7Bp" id="h8z-ob-Ynh"/>
+                <outlet property="postTitle" destination="zXT-9b-trc" id="1yd-5o-6uU"/>
                 <outlet property="posterProfileImage" destination="jQh-I2-waV" id="rzi-dQ-3ad"/>
             </connections>
         </placeholder>
@@ -56,9 +58,9 @@
                         <constraint firstAttribute="height" constant="150" id="2M3-Oa-7G2"/>
                     </constraints>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="description blah basdfj ef j" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q0q-Dd-8Qi">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="description blah basdfj ef j" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q0q-Dd-8Qi">
                     <rect key="frame" x="8" y="252" width="453" height="57"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>

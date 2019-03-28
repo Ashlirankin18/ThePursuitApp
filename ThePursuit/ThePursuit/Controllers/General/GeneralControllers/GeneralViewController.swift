@@ -65,26 +65,21 @@ class GeneralViewController: UIViewController {
 
 extension GeneralViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = generalCollection.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? GeneralPostCell else { return UITableViewCell()}
- 
+        let post = posts[indexPath.row]
         cell.selectionStyle = .none
-        cell.postView.fullName.text = "jeff"
-        cell.postView.createdDate.text = "today"
-        cell.postView.postDescription.text = "somtehing"
-        cell.postView.postImage.image = #imageLiteral(resourceName: "placeholder.png")
-     
+        cell.postView.fullName.text = post.posterId
+        cell.postView.createdDate.text = post.createdDate
+        cell.postView.postTitle.text = post.postTitle
+        cell.postView.postDescription.text = post.postDescription
+        cell.postView.postImage.kf.setImage(with: URL(string: post.imageURL), placeholder: #imageLiteral(resourceName: "placeholder.png") )
+        cell.postView.favoriteButton.isHidden = true
         return cell
     }
-    
-    private func fetchPoster() {
-        //DBService.firestor
-    }
-    
-    
 }
 
 extension GeneralViewController: UITableViewDelegate {
