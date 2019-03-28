@@ -35,6 +35,4 @@ struct Post {
         self.createdDate = dict[PostCollectionKeys.CreatedDateKey] as? String ?? "no date"
         self.tag = dict[PostCollectionKeys.TagKey] as? String ?? "not tag"
     }
-    
-
 }
