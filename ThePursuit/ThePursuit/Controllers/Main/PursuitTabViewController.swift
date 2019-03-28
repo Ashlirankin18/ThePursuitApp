@@ -32,9 +32,11 @@ class PursuitTabViewController: UITabBarController {
     generalController.title = "General"
     generalController.tabBarItem.image = #imageLiteral(resourceName: "home.png")
 
-  
+    let navigationController = UINavigationController(rootViewController: classroomViewController)
     
- viewControllers = [generalController, classroomViewController,searchController,profileController]
+  classroomViewController.navigationItem.title = "Classroom"
+    
+ viewControllers = [generalController, navigationController,searchController,profileController]
    
 
   }
