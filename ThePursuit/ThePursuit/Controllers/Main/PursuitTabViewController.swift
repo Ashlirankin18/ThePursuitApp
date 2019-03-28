@@ -23,6 +23,7 @@ class PursuitTabViewController: UITabBarController {
     let searchController = UINavigationController(rootViewController: SearchController())
     searchController.tabBarItem.image = #imageLiteral(resourceName: "icons8-create-25.png")
     let profileController = UIStoryboard(name: "ProfileStoryboard", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+<<<<<<< HEAD
     profileController.title = "Profile"
     profileController.tabBarItem.image = #imageLiteral(resourceName: "user_male.png")
     
@@ -31,6 +32,12 @@ class PursuitTabViewController: UITabBarController {
     let addNoteController = UINavigationController(rootViewController: AddNoteController())
     addNoteController.view.backgroundColor = .white
     addNoteController.title = "Add Note"
+=======
+
+    let classroomViewController = UnitsViewController()
+    classroomViewController.tabBarItem = UITabBarItem(title: "Classroom", image: UIImage(named: "graduation_cap"), tag: 1)
+
+>>>>>>> 2a6c6ca09733f7f3a54998c7000438f749acee69
     searchController.title = "Notes"
    
     generalController.title = "General"
@@ -38,6 +45,7 @@ class PursuitTabViewController: UITabBarController {
 
   
     
+<<<<<<< HEAD
  viewControllers = [generalController,classroomViewController,searchController,profileController]
    
 
@@ -45,6 +53,11 @@ class PursuitTabViewController: UITabBarController {
   
     
 
+=======
+ viewControllers = [generalController, classroomViewController,searchController,profileController]
+   
+
+>>>>>>> 2a6c6ca09733f7f3a54998c7000438f749acee69
   }
 
 }
