@@ -8,8 +8,10 @@
 
 import UIKit
 
-class GeneralPostCell: UICollectionViewCell {
+class GeneralPostCell: UITableViewCell {
   
-  @IBOutlet weak var postView: PostView!
-  
+    @IBOutlet weak var postView: PostView!
+    override func awakeFromNib() {
+        addSubview(postView)
+    }
 }

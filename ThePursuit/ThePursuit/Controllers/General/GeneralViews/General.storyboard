@@ -9,17 +9,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--General View Controller-->
+        <!--Pursuit-->
         <scene sceneID="azI-fY-EfY">
             <objects>
                 <viewController storyboardIdentifier="GeneralViewController" id="i17-4X-4BV" customClass="GeneralViewController" customModule="ThePursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KOd-mZ-lw3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PyS-Sz-AfT">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="547" id="diZ-Yh-j8I"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GeneralCell" id="Fgv-6A-K4q" customClass="GeneralPostCell" customModule="ThePursuit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fgv-6A-K4q" id="pcG-Qo-uXu" customClass="PostView" customModule="ThePursuit" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postView" destination="pcG-Qo-uXu" id="Gsg-SS-WVC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="iEf-s2-Rga">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="0.33403472829999997" green="0.44645626760000001" blue="0.89813512559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PyS-Sz-AfT" secondAttribute="trailing" id="5uR-kt-VIm"/>
+                            <constraint firstItem="iEf-s2-Rga" firstAttribute="leading" secondItem="Ueb-9i-XWa" secondAttribute="leading" id="6hy-wg-e1Q"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="top" secondItem="iEf-s2-Rga" secondAttribute="bottom" id="BSU-gN-u5w"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="top" secondItem="iEf-s2-Rga" secondAttribute="bottom" id="Ct6-Av-hwk"/>
+                            <constraint firstItem="iEf-s2-Rga" firstAttribute="top" secondItem="Ueb-9i-XWa" secondAttribute="top" id="DUW-ra-452"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="leading" secondItem="iEf-s2-Rga" secondAttribute="leading" id="I43-Br-8nY"/>
+                            <constraint firstItem="iEf-s2-Rga" firstAttribute="top" secondItem="Ueb-9i-XWa" secondAttribute="top" id="JVo-1w-Igr"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="leading" secondItem="KOd-mZ-lw3" secondAttribute="leading" id="OeG-Nc-etl"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="top" secondItem="iEf-s2-Rga" secondAttribute="bottom" id="XSH-br-Fyp"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="bottom" secondItem="Ueb-9i-XWa" secondAttribute="bottom" id="faG-kh-IVv"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="trailing" secondItem="Ueb-9i-XWa" secondAttribute="trailing" id="lSX-Jf-G3p"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="trailing" secondItem="iEf-s2-Rga" secondAttribute="trailing" id="mty-F4-bem"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="leading" secondItem="Ueb-9i-XWa" secondAttribute="leading" id="oEl-IW-1Tx"/>
+                            <constraint firstItem="iEf-s2-Rga" firstAttribute="trailing" secondItem="Ueb-9i-XWa" secondAttribute="trailing" id="qlg-u7-0dO"/>
+                            <constraint firstItem="PyS-Sz-AfT" firstAttribute="bottom" secondItem="Ueb-9i-XWa" secondAttribute="bottom" id="z3d-JT-dD9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ueb-9i-XWa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BL4-g6-iao"/>
+                    <navigationItem key="navigationItem" title="Pursuit" id="BL4-g6-iao">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="UQ3-Dz-xxq"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="generalCollection" destination="PyS-Sz-AfT" id="mVy-1t-nID"/>
+                        <outlet property="generalSearchBar" destination="iEf-s2-Rga" id="Weq-Cw-jbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLc-Eo-njX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
