@@ -24,59 +24,49 @@ class UnitsViewController: UITableViewController {
             }
         }
     }
-    
-//    @objc private func fetchBlogPosts() {
-//        refreshControl.beginRefreshing()
-//        listener = DBService.firestoreDB
-//            .collection(BlogsCollectionKeys.CollectionKey)
-//            .addSnapshotListener { [weak self] (snapshot, error) in
-//                if let error = error {
-//                    print("failed to fetch blogs with error: \(error.localizedDescription)")
-//                } else if let snapshot = snapshot {
-//                    self?.blogs = snapshot.documents.map { Blog(dict: $0.data()) }
-//                        .sorted { $0.createdDate.date() > $1.createdDate.date() }
-//                }
-//                DispatchQueue.main.async {
-//                    self?.refreshControl.endRefreshing()
-//                }
-//        }
-//    }
-//
+
+
     @objc private func getUnits() {
         listener = DBService.firestoreDB
-        .collection(UnitsCollectionKeys.CollectionKey)
+            .collection("classes").document("ytQtzAfmMgFIbaGt9IFq").collection("units")
             .addSnapshotListener { [weak self] (snapshot, error) in
                 if let error = error {
                     print("failed to fetch units with error: \(error.localizedDescription)")
                 } else if let snapshot = snapshot {
-                    self?.units = (snapshot.documents.map { Units(dict: $0.data()) })
+                    self?.units = (snapshot.documents.map { Units(dict: $0.data()) }).sorted{
+                        $0.unitName < $1.unitName
+                    }
                 }
-        }
+          }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getUnits()
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UnitCell", for: indexPath)
-        cell.textLabel?.text = units.description
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+        
+        cell.textLabel?.text = units[indexPath.row].unitName
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return units.count
     }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        <#code#>
+        return 200
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        <#code#>
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        <#code#>
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return 2
+//    }
+//
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Units"
+//    }
 
 }
