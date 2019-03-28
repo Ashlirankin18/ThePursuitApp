@@ -33,6 +33,7 @@ class ProfileHeaderView: UIView {
         Bundle.main.loadNibNamed("ProfileViewHeader", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
+    
     }
     
 }
