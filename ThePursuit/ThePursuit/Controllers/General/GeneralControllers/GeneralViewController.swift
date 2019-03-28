@@ -11,21 +11,21 @@ import Kingfisher
 import Firebase
 
 class GeneralViewController: UIViewController {
-
-  @IBOutlet weak var generalCollection: UITableView!
- 
-  @IBOutlet weak var generalSearchBar: UISearchBar!
-  
-  let cellId = "GeneralCell"
+    
+    @IBOutlet weak var generalCollection: UITableView!
+    
+    @IBOutlet weak var generalSearchBar: UISearchBar!
+    
+    let cellId = "GeneralCell"
     
     private var posts = [Post]() {
         didSet {
             DispatchQueue.main.async {
-               self.generalCollection.reloadData()
+                self.generalCollection.reloadData()
             }
         }
     }
-  
+    
     private var listener: ListenerRegistration!
     private var authservice = AppDelegate.authService
     private lazy var refreshControl: UIRefreshControl = {
@@ -35,14 +35,14 @@ class GeneralViewController: UIViewController {
         return rc
     }()
     
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        generalCollection.delegate = self
+        generalCollection.dataSource = self
+        //generalCollection.register(GeneralPostCell.self, forCellReuseIdentifier: cellId)
+        fetchPosts()
+    }
     
-    generalCollection.delegate = self
-    generalCollection.dataSource = self
-    generalCollection.register(GeneralPostCell.self, forCellReuseIdentifier: cellId)
-  }
-
     @objc private func fetchPosts() {
         refreshControl.beginRefreshing()
         listener = DBService.firestoreDB
@@ -55,30 +55,34 @@ class GeneralViewController: UIViewController {
                         let postData = Post(dict: $0.data())
                         self?.posts.append(postData)
                     }
-                DispatchQueue.main.async {
-                    self?.refreshControl.endRefreshing()
+                    DispatchQueue.main.async {
+                        self?.refreshControl.endRefreshing()
+                    }
                 }
         }
+        
     }
-
-}
 }
 
 extension GeneralViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = generalCollection.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? GeneralPostCell else { return UITableViewCell()}
-        let post = posts[indexPath.row]
+       // let post = posts[indexPath.row]
         cell.selectionStyle = .none
-        cell.postView.createdDate.text = "something"
-       cell.postView.postDescription.text = post.postDescription
-        cell.postView.createdDate.text = post.createdDate
-        cell.postView.postImage.kf.setImage(with: URL(string: post.imageURL), placeholder:#imageLiteral(resourceName: "placeholder.png"))
-
+        cell.postView.fullName.text = "jeff"
+        cell.postView.createdDate.text = "today"
+        cell.postView.postDescription.text = "somtehing"
+        cell.postView.postImage.image = #imageLiteral(resourceName: "placeholder.png")
+        //cell.postView
         return cell
+    }
+    
+    private func fetchPoster() {
+        //DBService.firestor
     }
     
     
