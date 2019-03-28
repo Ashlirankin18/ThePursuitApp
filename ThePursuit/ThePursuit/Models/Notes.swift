@@ -25,10 +25,11 @@ struct Notes {
   }
   
   init(dict:[String:Any]){
-    self.createdDate = dict["createdDate"] as? String ?? "no created date found"
-    self.description = dict["descritpion"] as? String ?? "no description found"
-    self.tag = dict["tag"] as? String ?? "no tag found"
-    self.noteId = dict["noteId"] as? String ?? "no note id found"
-    self.posterId = dict["[posterId"] as? String ?? "no poster Id Found"
+    self.createdDate = dict[NotesCollectionKeys.CreatedDateKey] as? String ?? "no created date found"
+    self.description = dict[NotesCollectionKeys.DescriptionKey] as? String ?? "no description found"
+    self.tag = dict[NotesCollectionKeys.TagKey] as? String ?? "no tag found"
+    self.noteId = dict[NotesCollectionKeys.NoteId] as? String ?? "no note id found"
+    self.posterId = dict[NotesCollectionKeys.PosterId] as? String ?? "no poster Id Found"
   }
+  
 }

@@ -42,6 +42,11 @@
 		2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221E7224C171000BBAE5D /* Alert+Extension.swift */; };
 		2EA221EB224C2D5B00BBAE5D /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221EA224C2D5B00BBAE5D /* Units.swift */; };
 		2EA221ED224C303B00BBAE5D /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221EC224C303B00BBAE5D /* Resources.swift */; };
+		2EA221F0224C427200BBAE5D /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221EF224C427200BBAE5D /* SearchController.swift */; };
+		2EA221F4224C443600BBAE5D /* NotesResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221F3224C443600BBAE5D /* NotesResultView.swift */; };
+		2EA221F6224C8CF400BBAE5D /* AddNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221F5224C8CF400BBAE5D /* AddNoteController.swift */; };
+		2EA221F8224C8D2600BBAE5D /* AddNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA221F7224C8D2600BBAE5D /* AddNoteView.xib */; };
+		2EA221FA224C8E4600BBAE5D /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA221F9224C8E4600BBAE5D /* AddNoteView.swift */; };
 		9D25DA3F5BC8D4755532850F /* Pods_ThePursuit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90CF7DC7D6878511037C2EA9 /* Pods_ThePursuit.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +88,11 @@
 		2EA221E7224C171000BBAE5D /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 		2EA221EA224C2D5B00BBAE5D /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		2EA221EC224C303B00BBAE5D /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		2EA221EF224C427200BBAE5D /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		2EA221F3224C443600BBAE5D /* NotesResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesResultView.swift; sourceTree = "<group>"; };
+		2EA221F5224C8CF400BBAE5D /* AddNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteController.swift; sourceTree = "<group>"; };
+		2EA221F7224C8D2600BBAE5D /* AddNoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNoteView.xib; sourceTree = "<group>"; };
+		2EA221F9224C8E4600BBAE5D /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		8129AA1A1136751ACA6FDB45 /* Pods-ThePursuit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePursuit.debug.xcconfig"; path = "Target Support Files/Pods-ThePursuit/Pods-ThePursuit.debug.xcconfig"; sourceTree = "<group>"; };
 		8A781B34A661932125A06EB9 /* Pods-ThePursuit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThePursuit.release.xcconfig"; path = "Target Support Files/Pods-ThePursuit/Pods-ThePursuit.release.xcconfig"; sourceTree = "<group>"; };
 		90CF7DC7D6878511037C2EA9 /* Pods_ThePursuit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThePursuit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +156,7 @@
 		2EA2219B224BE36100BBAE5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2EA221EE224C41F100BBAE5D /* SearchControllerFiles */,
 				2EA221C1224BF9C600BBAE5D /* Main */,
 				2EA221A7224BE65500BBAE5D /* General */,
 				2EA221A5224BE63C00BBAE5D /* Classroom */,
@@ -305,6 +316,18 @@
 			path = LoginAndSignUp;
 			sourceTree = "<group>";
 		};
+		2EA221EE224C41F100BBAE5D /* SearchControllerFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2EA221EF224C427200BBAE5D /* SearchController.swift */,
+				2EA221F3224C443600BBAE5D /* NotesResultView.swift */,
+				2EA221F5224C8CF400BBAE5D /* AddNoteController.swift */,
+				2EA221F7224C8D2600BBAE5D /* AddNoteView.xib */,
+				2EA221F9224C8E4600BBAE5D /* AddNoteView.swift */,
+			);
+			path = SearchControllerFiles;
+			sourceTree = "<group>";
+		};
 		8CB3872A0C32B99B2F72882C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +412,7 @@
 				2EA221DA224C095700BBAE5D /* LoginView.xib in Resources */,
 				2EA221AF224BEB2E00BBAE5D /* PostView.xib in Resources */,
 				2EA2218A224BE26C00BBAE5D /* Main.storyboard in Resources */,
+				2EA221F8224C8D2600BBAE5D /* AddNoteView.xib in Resources */,
 				2EA221D1224C062F00BBAE5D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,9 +494,12 @@
 				2EA221E4224C0DC500BBAE5D /* Notes.swift in Sources */,
 				2EA221EB224C2D5B00BBAE5D /* Units.swift in Sources */,
 				2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */,
+				2EA221F4224C443600BBAE5D /* NotesResultView.swift in Sources */,
+				2EA221F0224C427200BBAE5D /* SearchController.swift in Sources */,
 				2EA221E0224C0AE100BBAE5D /* LoginInView.swift in Sources */,
 				2EA221B3224BEEA800BBAE5D /* GeneralPostCell.swift in Sources */,
 				2EA221A9224BE6E800BBAE5D /* LessonWebViewController.swift in Sources */,
+				2EA221F6224C8CF400BBAE5D /* AddNoteController.swift in Sources */,
 				2EA221E2224C0AE600BBAE5D /* SignUpView.swift in Sources */,
 				2EA221A2224BE4F300BBAE5D /* ProfileViewController.swift in Sources */,
 				2EA221B1224BEE1F00BBAE5D /* ProfileCells.swift in Sources */,
@@ -489,6 +516,7 @@
 				2EA221AD224BEB1C00BBAE5D /* PostView.swift in Sources */,
 				2EA221D7224C094C00BBAE5D /* SignUpViewController.swift in Sources */,
 				2EA221C3224BFA3400BBAE5D /* AuthService.swift in Sources */,
+				2EA221FA224C8E4600BBAE5D /* AddNoteView.swift in Sources */,
 				2EA221B8224BF71300BBAE5D /* PursuitTabViewController.swift in Sources */,
 				2EA221C8224BFB5C00BBAE5D /* PAUser.swift in Sources */,
 				2EA221ED224C303B00BBAE5D /* Resources.swift in Sources */,

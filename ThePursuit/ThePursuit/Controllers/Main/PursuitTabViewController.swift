@@ -20,7 +20,12 @@ class PursuitTabViewController: UITabBarController {
   func setupViewControllers(){
     let generalController = UIStoryboard(name: "General", bundle: nil).instantiateViewController(withIdentifier: "GeneralViewController") as!  GeneralViewController
     
-    viewControllers = [generalController]
+    
+    
+    let searchController = UINavigationController(rootViewController: SearchController())
+    searchController.title = "Notes"
+    
+    viewControllers = [generalController,searchController]
     
   }
 

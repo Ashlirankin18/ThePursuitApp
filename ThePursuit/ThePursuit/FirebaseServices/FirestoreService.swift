@@ -51,6 +51,14 @@ struct ResourceCollectionKeys{
   static let resourceName = "resourceName"
   static let resourceLink = "resourceLink"
 }
+struct NotesCollectionKeys{
+  static let CollectionKeys = "notes"
+  static let DescriptionKey = "description"
+  static let CreatedDateKey = "createdDate"
+  static let TagKey = "tag"
+  static let NoteId = "noteId"
+  static let PosterId = "posterId"
+}
 final class DBService {
   private init() {}
   
@@ -98,6 +106,15 @@ final class DBService {
         } else {
           print("blog posted successfully to ref: \(post.postId)")
         }
+    }
+  }
+  
+  static public func createNote(note:Notes){
+    firestoreDB.collection(NotesCollectionKeys.CollectionKeys).document(note.noteId).setData([NotesCollectionKeys.CreatedDateKey:note.createdDate,NotesCollectionKeys.DescriptionKey:note.description,NotesCollectionKeys.NoteId:note.noteId,NotesCollectionKeys.PosterId:note.posterId,NotesCollectionKeys.TagKey:note.tag]) { (error) in
+      if let error = error {
+        print("there was an error creating your note: \(error.localizedDescription)")
+      }
+      print("note sucessfully created")
     }
   }
 }
