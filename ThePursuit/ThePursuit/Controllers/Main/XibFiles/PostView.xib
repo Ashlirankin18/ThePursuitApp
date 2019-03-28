@@ -68,14 +68,21 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vr-6f-Cad">
+                    <rect key="frame" x="423" y="6" width="38" height="22"/>
+                    <state key="normal" title="Button" image="icons8-add-to-favorites-25"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jP8-za-7Bp" secondAttribute="trailing" constant="70" id="4Iu-Pv-Ues"/>
                 <constraint firstItem="zXT-9b-trc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="5fi-zB-fXl"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jP8-za-7Bp" secondAttribute="trailing" constant="70" id="8ho-TT-Afp"/>
+                <constraint firstItem="jP8-za-7Bp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="70" id="9qQ-p8-gdl"/>
+                <constraint firstItem="jP8-za-7Bp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="70" id="9wt-Lg-yL6"/>
                 <constraint firstItem="pbi-mn-sgE" firstAttribute="top" secondItem="ECM-QP-fFa" secondAttribute="bottom" constant="8" id="A3a-GY-DiY"/>
                 <constraint firstItem="pbi-mn-sgE" firstAttribute="top" secondItem="ECM-QP-fFa" secondAttribute="bottom" constant="8" id="ACh-cb-Ise"/>
                 <constraint firstItem="ECM-QP-fFa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="CNa-h2-X5j"/>
+                <constraint firstItem="8vr-6f-Cad" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="CQo-Hu-SIb"/>
                 <constraint firstItem="jQh-I2-waV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="I5g-bD-E5m"/>
                 <constraint firstAttribute="bottom" secondItem="Q0q-Dd-8Qi" secondAttribute="bottom" constant="20" symbolic="YES" id="IMI-l9-gwb"/>
                 <constraint firstItem="jQh-I2-waV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="LuS-YP-fcP"/>
@@ -83,13 +90,13 @@
                 <constraint firstItem="pbi-mn-sgE" firstAttribute="leading" secondItem="jQh-I2-waV" secondAttribute="trailing" constant="8" id="PSW-1P-QgL"/>
                 <constraint firstItem="zXT-9b-trc" firstAttribute="top" secondItem="jP8-za-7Bp" secondAttribute="bottom" constant="3" id="PuF-ht-ezU"/>
                 <constraint firstItem="Q0q-Dd-8Qi" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="Rqj-ho-VfR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8vr-6f-Cad" secondAttribute="trailing" constant="20" id="Wp0-1x-F4f"/>
                 <constraint firstItem="jQh-I2-waV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="ZAZ-c7-zjM"/>
                 <constraint firstItem="Q0q-Dd-8Qi" firstAttribute="top" secondItem="zXT-9b-trc" secondAttribute="bottom" id="bRS-tG-Pbd"/>
                 <constraint firstItem="ECM-QP-fFa" firstAttribute="leading" secondItem="jQh-I2-waV" secondAttribute="trailing" constant="8" id="cAe-8B-mlw"/>
                 <constraint firstItem="jP8-za-7Bp" firstAttribute="top" secondItem="jQh-I2-waV" secondAttribute="bottom" constant="10" id="o5T-Df-VCB"/>
                 <constraint firstItem="Q0q-Dd-8Qi" firstAttribute="leading" secondItem="jQh-I2-waV" secondAttribute="leading" id="tI1-cE-Lmx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zXT-9b-trc" secondAttribute="trailing" constant="16" id="vaQ-wP-e9q"/>
-                <constraint firstItem="jP8-za-7Bp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="70" id="wyB-3M-UwH"/>
                 <constraint firstItem="jQh-I2-waV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="xl7-yA-LZl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -98,6 +105,7 @@
         </view>
     </objects>
     <resources>
+        <image name="icons8-add-to-favorites-25" width="18.75" height="18.75"/>
         <image name="placeholder" width="512" height="512"/>
     </resources>
 </document>
