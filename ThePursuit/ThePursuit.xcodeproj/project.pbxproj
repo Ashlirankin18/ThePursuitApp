@@ -507,11 +507,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EA221E4224C0DC500BBAE5D /* Notes.swift in Sources */,
-<<<<<<< HEAD
+
 				912E2AC9224C2B090087D294 /* IBDesignableView.swift in Sources */,
-=======
+
 				0DE28EE1224D0E65005BF3AD /* PostDetailViewController.swift in Sources */,
->>>>>>> 84a64db31fa4fa17b2343e2b8b33a5ef407881a4
+
 				2EA221EB224C2D5B00BBAE5D /* Units.swift in Sources */,
 				2EA221E8224C171000BBAE5D /* Alert+Extension.swift in Sources */,
 				2EA221E0224C0AE100BBAE5D /* LoginInView.swift in Sources */,
