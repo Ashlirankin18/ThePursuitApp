@@ -20,14 +20,23 @@ class PursuitTabViewController: UITabBarController {
   func setupViewControllers(){
     let generalController = UIStoryboard(name: "General", bundle: nil).instantiateViewController(withIdentifier: "GeneralViewController") as!  GeneralViewController
 
-    let profileController = ProfileViewController()
-    profileController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "user_male"), tag: 1)
+
+  
+    let classroomViewController = UnitsViewController()
+    classroomViewController.tabBarItem = UITabBarItem(title: "Classroom", image: UIImage(named: "graduation_cap"), tag: 1)
+
+
 
     generalController.title = "General"
     generalController.tabBarItem.image = #imageLiteral(resourceName: "home.png")
-
-    viewControllers = [generalController,profileController]
    
+
+    let profileController = ProfileViewController()
+    profileController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "user_male" ), tag: 3)
+    
+    
+    viewControllers = [generalController, classroomViewController, profileController]
+
   }
 
 }

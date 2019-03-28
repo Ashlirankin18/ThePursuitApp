@@ -41,14 +41,13 @@ private var pursuitUser: PAUser!
     
   override func viewDidLoad() {
         super.viewDidLoad()
-
     configureTableView()
     }
 private func configureTableView(){
         profileTableView.tableHeaderView = profileHeaderView
         profileTableView.dataSource = self
         profileTableView.delegate = self
-        profileTableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "ProfileCell")
+        profileTableView.register(UINib(nibName: "ProfileHeaderView", bundle: nil), forCellReuseIdentifier: "ProfileCell")
         }
     
     private func updateProfileUI(){
