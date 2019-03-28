@@ -81,9 +81,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ueb-9i-XWa"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pursuit" id="BL4-g6-iao">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="UQ3-Dz-xxq"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Pursuit" id="BL4-g6-iao"/>
                     <connections>
                         <outlet property="generalCollection" destination="PyS-Sz-AfT" id="mVy-1t-nID"/>
                         <outlet property="generalSearchBar" destination="iEf-s2-Rga" id="Weq-Cw-jbS"/>
@@ -100,7 +98,29 @@
                     <view key="view" contentMode="scaleToFill" id="kfs-7s-naD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRj-ol-aiM" customClass="PostView" customModule="ThePursuit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="eP7-AQ-PKD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="trailing" secondItem="21c-2m-XpA" secondAttribute="trailing" id="62l-Hk-UqX"/>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="leading" secondItem="kfs-7s-naD" secondAttribute="leading" id="6c2-Jb-QMe"/>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="trailing" secondItem="21c-2m-XpA" secondAttribute="trailing" id="7wj-jP-yCI"/>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="top" secondItem="21c-2m-XpA" secondAttribute="top" id="7yq-1B-gDA"/>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="bottom" secondItem="21c-2m-XpA" secondAttribute="bottom" id="AUW-fS-aiD"/>
+                            <constraint firstItem="21c-2m-XpA" firstAttribute="bottom" secondItem="xRj-ol-aiM" secondAttribute="bottom" id="Pbn-cB-HEH"/>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="bottom" secondItem="21c-2m-XpA" secondAttribute="bottom" id="Vsk-XI-Tj4"/>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="top" secondItem="21c-2m-XpA" secondAttribute="top" id="aki-i4-rOO"/>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="leading" secondItem="21c-2m-XpA" secondAttribute="leading" id="cY2-QC-z8h"/>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="top" secondItem="21c-2m-XpA" secondAttribute="top" id="edY-oD-hZV"/>
+                            <constraint firstItem="xRj-ol-aiM" firstAttribute="leading" secondItem="21c-2m-XpA" secondAttribute="leading" id="rcx-eq-LLN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="21c-2m-XpA"/>
                     </view>
                 </viewController>
