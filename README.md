@@ -8,6 +8,9 @@ An app that allows pursuit fellows easy access to pertinent class related docume
 - Clicking on a lesson will segue into a Safari View Controller that shows the information on the lesson on a Safari webpage.
 - The user should be able to view their profile picture, handle, name, favorites, and notes in the Profile tab.
 
+# Gifs
+![Small GIF (400x792)](https://user-images.githubusercontent.com/43770785/55296325-8fff4c00-53e5-11e9-9cd8-20a7b1b48cf9.gif)
+
 # Built With
 - Firebase
 - KingFisher
