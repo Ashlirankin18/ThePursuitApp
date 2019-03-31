@@ -1,7 +1,8 @@
 # ThePursuitApp
 An app that allows pursuit fellows easy access to pertinent class related documents, announcements posted from instructors. 
 
-
+# Links
+[Trello](https://trello.com/b/JFEo213R/hackathon-pursuit-app)
 
 # Contributors
 
