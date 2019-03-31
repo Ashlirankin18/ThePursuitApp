@@ -4,4 +4,4 @@ An app that allows pursuit fellows easy access to pertinent class related docume
 
 
 # Contributors
-https://github.com/Ashlirankin18
+[Ashli Rankin](https://github.com/Ashlirankin18)
